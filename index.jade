@@ -2,15 +2,17 @@
 html
   head
     title Jade 语法文档的例子
-    link(href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Ubuntu:400,700", rel="stylesheet", type="text/css")
+    link(href="css/google-web-fonts.css", rel="stylesheet", type="text/css")
     link(href="assets/global.min.css", rel="stylesheet", type="text/css")
     script(src="http://cdn.staticfile.org/jquery/2.1.0/jquery.min.js")
     script(src="assets/global.min.js")
     meta(name="description", content="一份 Jade 模版引擎的的交互式语法文档")
     link(rel="author", href="https://plus.google.com/u/0/113306279128990179378")
   body(data-spy="scroll", data-target=".subnav", data-offset="150")
-    a(href="https://github.com/naltatis/jade-syntax-docs")
-      img(style="position: absolute; top: 0; right: 0; border: 0;", src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png", alt="Fork me on GitHub")
+    a(href="https://github.com/coffee-js/jade-syntax-docs")
+      img(style="position: absolute; top: 0; right: 0; border: 0;"
+        src="img/forkme_right_darkblue_121621.png"
+        alt="Fork me on GitHub")
     .container
       header.jumbotron.subhead
         h1
@@ -322,29 +324,14 @@ html
       p
         | 作者: <strong>naltatis</strong>&nbsp;
       p
-        | 关注我的 
+        | 关注作者 
         a(href="https://github.com/naltatis", title="naltatis on github") github 
         | 和 
         a(href="https://twitter.com/naltatis", title="naltatis on twitter") twitter
       p
-        a.FlattrButton(rev="flattr;button:compact", href="https://github.com/naltatis/jade-syntax-docs", lang="de", title="interactive Jade Syntax Documentation")
+        a(href="http://naltatis.github.io/jade-syntax-docs/") 英文原站
+      p
+        | 翻译 
+        a(href='http://coffee-js.org') coffee-js
 
-    script(async)
-      (function() {
-          var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-          s.type = 'text/javascript';
-          s.async = true;
-          s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-          t.parentNode.insertBefore(s, t);
-      })();
-
-    script(type="text/javascript")
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-33399084-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+    include html/ga.html
